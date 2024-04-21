@@ -1,8 +1,10 @@
 # jppaulo's Personal website
 
+This project is currently hosted in [linux.ime.usp.br](https://linux.ime.usp.br/~jppaulo).
+
 ## How to run the project
 
-### Install local dependencies
+### Install dependencies
 
 ```bash
 bundle install

@@ -3,8 +3,9 @@ const conway = (p) => {
   /* ENVIRONMENT */
 
   const SQUARE_SIZE = 10;
-  const FRAME_RATE = 5;
+  const FRAME_RATE = 10;
   const DISTRIBUTION = 0.3;
+  const MAX_TRANSPARENCY = 255;
   let grid;
 
   /* ESSENTIAL CLASSES */
@@ -64,6 +65,8 @@ const conway = (p) => {
   }
 
   class Square {
+    transparency = 0;
+
     constructor(i, j, size, grid) {
       this.i = i;
       this.j = j;
@@ -80,8 +83,12 @@ const conway = (p) => {
 
     draw() {
       if (this.state) {
-        p.fill(this.red, 0, this.blue);
+        p.fill(this.red, 0, this.blue, p.min(this.transparency, MAX_TRANSPARENCY));
         p.rect(this.x, this.y, this.size, this.size);
+        this.transparency += 40;
+      }
+      else {
+        this.transparency = 0;
       }
     }
 
@@ -121,6 +128,7 @@ const conway = (p) => {
       let i = p.floor(p.mouseY / SQUARE_SIZE);
       let j = p.floor(p.mouseX / SQUARE_SIZE);
       grid.grid[i][j].state = true;
+      grid.grid[i][j].transparency = MAX_TRANSPARENCY;
       grid.grid[i][j].draw();
     }
     grid.update();
