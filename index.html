@@ -1,0 +1,42 @@
+---
+title: JPPAULO's Blog
+layout: default
+background: "walkers"
+scripts:
+  - "lorenz"
+---
+<link href="/assets/css/main-page.css" rel="stylesheet">
+<div id="main-page-header">
+  <div>
+    <h1> Welcome to JPPAULO's Blog </h1>
+    <p> This is a blog where I will post about my projects, ideas and thoughts. Hope you like it! :) </p>
+  </div>
+  <div id="lorenz"></div>
+</div>
+<h2> Blog posts </h2>
+<ul>
+  {% for post in site.posts %}
+  <li>
+    <a href="{{ post.url }}">{{ post.title }}
+      - {{ post.date | date: "%B %d, %Y" }}
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+<h2> P5 JS projects </h2>
+<p>
+I'm not the greatest fan of JavaScript, but I have to admit that P5 JS
+is fun to play with. I used to have a lot of fun with it back in 2022,
+when I was in my first Computer Science year. Well, I've stopped for a
+while, but (since it's a dependence for this website :P) I'm planning
+to get back to it in my free time. Here are some of the projects I've
+made almost 2 years ago (please, don't mind the bad optimization and
+the junky code):
+</p>
+<ul>
+  {% for project in site.data.projects %}
+  <li>
+    <a href="{{ project.url }}"> {{ project.name }} </a>
+  </li>
+  {% endfor %}
+</ul>

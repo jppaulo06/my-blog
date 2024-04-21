@@ -1,0 +1,36 @@
+@import "default.css";
+#main-page-content-title {
+  color: white;
+  font-size: 4em;
+  font-family: "Chivo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 1000;
+  font-style: normal;
+}
+
+#main-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1em;
+}
+
+#lorenz {
+  width: 30em;
+  height: 30em;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+ul li {
+  margin-bottom: 0.5em;
+}
+
+p {
+  margin-top: 0.2em;
+  margin-bottom: 0.4em;
+}
+
+/*# sourceMappingURL=main-page.css.map */

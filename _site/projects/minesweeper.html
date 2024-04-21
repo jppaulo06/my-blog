@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html style="">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>novo_campo</title>
+    <script src="/assets/scripts/p5.min.js"></script>
+		<style>
+
+      html {
+        background-color: #9932CC;
+        transition: 1s;
+      }
+
+      .container_jogo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+      }
+
+			canvas {
+				margin: auto;
+			}
+
+      p {
+        font-size: 2em;
+        color: white;
+      }
+
+      #botao_modo{
+        border: 0px;
+        border-radius: 3px;
+        width: 200px;
+        padding: 1% 0 1% 0;
+        margin-bottom: 2%;
+      }
+
+      #jogo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0px;
+      }
+
+      #cores {
+        display: grid;
+        grid-template-columns: repeat(3, 70px);
+        grid-template-rows: repeat(2, 70px);
+        gap: 30px;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+
+      #cores > button {
+        border-radius: 4px;
+        border: 0px;
+        height: 70px;
+        width: 70px;
+       }
+
+      #cores > button:active {
+        margin-top: 3px;
+      }
+
+      #dificuldade {
+        display: flex;
+        flex-direction: column;
+      }
+
+      #dificuldade > button {
+       border-radius: 4px;
+       width: 200px;
+       height: 50px;
+       border: 0px;
+       margin-bottom: 10px;
+      }
+
+      #dificuldade > button:active{
+        : gray;
+      }
+
+
+
+		</style>
+	</head>
+	<body>
+    <div id="jogo">
+      <p> Campo Minado do JP </p>
+      <button id="botao_modo" onclick="alterna_modo()"> BANDEIRAS </button>
+      <div class="container_jogo">
+        <div style="display: flex; align-items: center; flex-direction: column;">
+          <p> CORES DO JOGO </p>
+          <div id="cores"> <!-- cores do jogo -->
+            <button style="background-color: #E62323"></button>
+            <button style="background-color: #FFEF06"></button>
+            <button style="background-color: #20F908"></button>
+            <button style="background-color: #EC15E5"></button>
+            <button style="background-color: #0672FF"></button>
+            <button style="background-color: #5107FF"></button>
+          </div>
+          <p> DIFICULDADE </p>
+          <div id="dificuldade"> <!-- dificuldade do jogo -->
+            <button class="dificuldade facil"> Facil </button>
+            <button class="dificuldade medio"> Médio </button>
+            <button class="dificuldade dificil"> Difícil </button>
+          </div>
+        </div>
+        <div id="canvas-container"></div>
+      </div>
+    </div>
+    <button onClick="window.location.reload()"> resetar </button>
+  </body>
+  <script src="minesweeper-scripts/array_cores.js"></script>
+  <script src="minesweeper-scripts/bloco.js"></script>
+  <script src="minesweeper-scripts/side_functions.js"></script>
+  <script src="minesweeper-scripts/sketch.js"></script>
+</html>
