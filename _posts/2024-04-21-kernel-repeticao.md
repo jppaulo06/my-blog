@@ -50,3 +50,6 @@ Ainda assim, consegui rodar o programa minimamente.
 
 O Siqueira comentou com o Luan sobre uma duplicação do DRM que aparecia no
 output do script feito. Logo, o Luan me pediu para remover essa duplicação.
+
+Removi e enviei o patch, mas ainda não recebi feedback. Acredito que terei
+que enviar novamente.
