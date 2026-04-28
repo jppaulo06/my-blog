@@ -89,7 +89,7 @@ const walkers = (p) => {
   /* MAGIC FUNCTIONS */
 
   p.setup = function() {
-    p.createCanvas(p.windowWidth, p.windowHeight);
+    p.createCanvas(document.documentElement.clientWidth, document.documentElement.clientHeight);
     walkersBackground = new WalkersBackground();
   }
 

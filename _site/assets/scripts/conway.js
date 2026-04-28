@@ -117,7 +117,7 @@ const conway = (p) => {
   /* MAGIC FUNCTIONS */
 
   p.setup = function() {
-    p.createCanvas(p.windowWidth, p.windowHeight);
+    p.createCanvas(document.documentElement.clientWidth, document.documentElement.clientHeight);
     p.frameRate(FRAME_RATE);
     grid = new Grid(SQUARE_SIZE);
   }
